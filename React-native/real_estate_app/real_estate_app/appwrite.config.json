@@ -1,0 +1,139 @@
+{
+    "projectId": "694a4af70020dc6ca37a",
+    "endpoint": "https://fra.cloud.appwrite.io/v1",
+    "projectName": "BJ_REESTATE",
+    "settings": {
+        "services": {
+            "account": true,
+            "avatars": true,
+            "databases": true,
+            "locale": true,
+            "health": true,
+            "storage": true,
+            "teams": true,
+            "users": true,
+            "sites": true,
+            "functions": true,
+            "graphql": true,
+            "messaging": true
+        },
+        "auth": {
+            "methods": {
+                "jwt": true,
+                "phone": true,
+                "invites": true,
+                "anonymous": true,
+                "email-otp": true,
+                "magic-url": true,
+                "email-password": true
+            },
+            "security": {
+                "duration": 31536000,
+                "limit": 0,
+                "sessionsLimit": 10,
+                "passwordHistory": 0,
+                "passwordDictionary": false,
+                "personalDataCheck": false,
+                "sessionAlerts": false,
+                "mockNumbers": []
+            }
+        }
+    },
+
+    "tablesDB": [
+          {
+            "$id": "69521f58002c9288a782",
+            "name": "development",
+            "enabled": true
+          }
+        ],
+        "collections": [
+          {
+            "$id": "69521fec002985dabb6c",
+            "databaseId": "69521f58002c9288a782",
+            "name": "agents",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "documentSecurity": true,
+            "attributes": [
+              { "key": "name", "type": "string", "size": 500, "required": true },
+              { "key": "email", "type": "string", "size": 350, "required": true },
+              { "key": "avatar", "type": "string", "size": 500, "required": true }
+            ],
+            "indexes": [],
+            "enabled": true
+          },
+          {
+            "$id": "6952242e001191a37b4d",
+            "databaseId": "69521f58002c9288a782",
+            "name": "gallaries",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "documentSecurity": true,
+            "attributes": [
+              { "key": "image", "type": "string", "size": 500, "required": true }
+            ],
+            "indexes": [],
+            "enabled": true
+          },
+      
+          {
+            "$id": "6952251f00233da3434b",
+            "databaseId": "69521f58002c9288a782",
+            "name": "reviews",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "documentSecurity": true,
+            "attributes": [
+              { "key": "reviewerName", "type": "string", "size": 500, "required": true },
+              { "key": "review", "type": "string", "size": 5000, "required": true },
+              { "key": "avatar", "type": "string", "size": 500, "required": true },
+              { "key": "rating", "type": "double", "min": 0, "max": 5, "required": true }
+            ],
+            "indexes": [],
+            "enabled": true
+          },
+             
+          {
+            "$id": "6952261500050acf376d",
+            "databaseId": "69521f58002c9288a782",
+            "name": "properties",
+            "$permissions": [
+                "create(\"any\")",
+                "read(\"any\")",
+                "update(\"any\")",
+                "delete(\"any\")"
+            ],
+            "documentSecurity": true,
+            "attributes": [
+              { "key": "propertName", "type": "string", "size": 500, "required": true },
+              { "key": "type", "type": "string", "size": 100, "required": true },
+              { "key": "description", "type": "string", "size": 5000, "required": true },
+              { "key": "address", "type": "string", "size": 2000, "required": true },
+              { "key": "price", "type": "integer", "min": 0, "required": true },
+              { "key": "area", "type": "integer", "min": 0, "required": true },
+              { "key": "bedrooms", "type": "integer", "required": true },
+              { "key": "bathrooms", "type": "integer", "required": true },
+              { "key": "rating", "type": "double", "min": 0, "max": 5, "required": true },
+              { "key": "facilities", "type": "string", "size": 100, "array": true, "required": true },
+              { "key": "image", "type": "string", "size": 1000, "required": true },
+              { "key": "geolocation", "type": "string", "size": 1000, "required": true }
+            ],
+            "indexes": [],
+            "enabled": true
+          }
+        ]
+}
+
